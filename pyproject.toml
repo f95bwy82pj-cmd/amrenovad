@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vkads"
+version = "0.1.0"
+description = "Выгрузка статистики и отчёты по кабинету VK Рекламы (ads.vk.com)"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+vkads = "vkads.cli:main"
+
+[tool.setuptools]
+packages = ["vkads"]
